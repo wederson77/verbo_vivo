@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #495E57;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #F5F7F8;
+  color: white;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  height: 2px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border: 1px solid red; */
+}
+
+.header .logo h1 {
+  margin: 0;
+  color: #F4CE14;
+  font-size: larger;
+}
+
+.header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  color: #F4CE14;
+}
+
+.header nav ul li {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.main-content {
+  display: flex;
+  padding: 20px;
+}
+
+.search-section {
+  flex-grow: 1;
+  /* border: 1px solid red; */
+  margin-top: 0px;
+
+}
+
+.search-section input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+
+#searchButton {
+  /* Reset básico para remover o estilo padrão do botão */
+  appearance: none;
+  border: none;
+  /* background-color: transparent; */
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  
+  /* Estilo base */
+  padding: 10px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 50%;
+  width: 25%;
+  font-size: 13px;
+  font-weight: bold;
+  color: #495E57;
+  background-color: #F5F7F8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  
+  /* Efeito gradiente sutil */
+  /* background: linear-gradient(135deg, #007BFF, #0056b3); */
+  
+  /* Adiciona um efeito de foco visível para acessibilidade */
+  outline: none;
+}
+
+#searchButton:focus {
+  outline: 3px solid rgba(0, 123, 255, 0.5);
+  outline-offset: 4px;
+}
+
+#searchButton:hover {
+  /* Efeito hover com transição suave */
+  background-color: #495E57;
+  transform: translateY(-2px); /* Eleva o botão */
+  color: #F5F7F8;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra maior no hover */
+}
+
+#searchButton:active {
+  /* Efeito para quando o botão está pressionado */
+  transform: translateY(1px); /* Reduz a elevação no clique */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+}
+
+#searchButton:disabled {
+  /* Estilo para quando o botão está desabilitado */
+  background-color: #a5a5a5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Efeito responsivo para telas menores */
+@media (max-width: 600px) {
+  #searchButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+
+.side-section {
+  width: 500px;
+  padding-left: 20px;
+  border-left: 1px solid #ccc;
+  
+}
+
+.side-section h3 {
+  margin-top: 0;
+  color: #F5F7F8;
+}
+
+.side-section p {
+  margin-top: 0;
+  color: #F5F7F8;
+}
+
+.side-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.side-section ul li {
+  margin-bottom: 10px;
+  color: #F5F7F8;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
